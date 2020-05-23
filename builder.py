@@ -25,7 +25,6 @@ n.write("""import vk_api
 from numpy import random
 import time
 from vk_api.keyboard import *
-import traceback
 from vk_api.bot_longpoll import *
 vk_session = vk_api.VkApi(token='"""+str(token)+"""')
 vk = vk_session.get_api()
@@ -160,8 +159,8 @@ def start():
 while True:
     try:
         start()
-    except Exception as e:
-        print('Error cyka', traceback.format_exc)
+    except:
+        print('Error cyka')
         """)
 n.close()
 print('\033[32m[>]Рейд бот готов!\033[39m')
